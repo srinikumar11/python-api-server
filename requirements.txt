@@ -1,0 +1,6 @@
+Flask
+Flask-Security
+Flask-SQLAlchemy
+httpie
+flask_cors
+pymysql

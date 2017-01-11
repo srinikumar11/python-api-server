@@ -1,0 +1,7 @@
+.idea
+.vscode
+venv_api
+env
+get_token.py
+config.py
+__pycache__
