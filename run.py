@@ -103,7 +103,7 @@ from flask_security import auth_token_required
 from flask import jsonify
 
 def unauth_handler():
-    return jsonify({'message': 'please login.'}) 
+    return Response(jsonify({'message': 'please login.'}) , 401)
 security.unauthorized_handler(unauth_handler)
 
 
