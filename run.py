@@ -157,12 +157,10 @@ def logout():
     }
     return jsonify(ret_dict)
 
-@app.before_request
-def before_request():
-    if request.url.startswith('http://'):
-        url = request.url.replace('http://', 'https://', 1)
-        code = 301
-        return redirect(url, code=code)
+# @app.before_request
+# def before_request():
+#     if request.url.startswith('http://'):
+#         return redirect(request.url.replace('http://', 'https://', 1))
 
 
 app.run(port=5001, debug=True)
