@@ -15,6 +15,7 @@ app.config['SECURITY_PASSWORD_HASH'] = config.SECURITY_PASSWORD_HASH
 app.config['SECURITY_PASSWORD_SALT'] = config.SECURITY_PASSWORD_SALT
 app.config['WTF_CSRF_ENABLED'] = config.WTF_CSRF_ENABLED
 app.config['SECURITY_TOKEN_MAX_AGE'] = config.SECURITY_TOKEN_MAX_AGE
+app.config['SECURITY_POST_LOGOUT_VIEW'] = '/api-logout'
 
 
 db = SQLAlchemy(app)
@@ -147,9 +148,15 @@ def index():
     }
     return jsonify(ret_dict)
 
-@app.route('/logout')
+@app.route('/api-logout')
 def logout():
-    logout_user()
+    # logout_user()
+    ret_dict = {
+        "version": "1.0",
+        "message": "user logged out"
+    }
+    return jsonify(ret_dict)
+
 
 
 app.run(port=5001, debug=True)
