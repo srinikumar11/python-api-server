@@ -19,7 +19,7 @@ Open another CMD and run:<br/>
   5. http 127.0.0.1:5001/dummy-api-token/  Authentication-Token:<token from get_token scirpt><br/>
 
 
-1. python3.5 /Users/srinivasankumar/Library/Python/3.5/lib/python/site-packages/virtualenv.py venv_api
+1. python3.5 virtualenv.py venv_api
 2. source venv_api/bin/activate
 3. pip install --upgrade pip
 4. pip install -r requirements.txt
